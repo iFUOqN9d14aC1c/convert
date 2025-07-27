@@ -17,14 +17,14 @@
 
 ```bash
 # Скачиваем и запускаем скрипт установки
-curl -fsSL https://raw.githubusercontent.com/yourusername/telegram-proxy-converter/main/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/iFUOqN9d14aC1c/convert/main/setup.sh | bash
 ```
 
 ### Ручная установка
 
 1. **Клонируйте репозиторий:**
 ```bash
-git clone https://github.com/yourusername/telegram-proxy-converter.git
+git clone https://github.com/iFUOqN9d14aC1c/convert.git
 cd telegram-proxy-converter
 ```
 
@@ -51,7 +51,7 @@ docker-compose up -d --build
 
 2. **Клонируйте репозиторий:**
 ```bash
-git clone https://github.com/yourusername/telegram-proxy-converter.git
+git clone https://github.com/iFUOqN9d14aC1c/convert.git
 cd telegram-proxy-converter
 ```
 
@@ -188,7 +188,7 @@ MIT License - см. файл [LICENSE](LICENSE)
 
 Если у вас возникли проблемы:
 
-1. Проверьте [Issues](https://github.com/yourusername/telegram-proxy-converter/issues)
+1. Проверьте [Issues](https://github.com/iFUOqN9d14aC1c/convert/issues)
 2. Создайте новый Issue с описанием проблемы
 3. Приложите логи: `docker-compose logs`
 
