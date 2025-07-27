@@ -25,7 +25,7 @@ curl -fsSL https://raw.githubusercontent.com/iFUOqN9d14aC1c/convert/main/setup.s
 1. **Клонируйте репозиторий:**
 ```bash
 git clone https://github.com/iFUOqN9d14aC1c/convert.git
-cd telegram-proxy-converter
+cd convert
 ```
 
 2. **Запустите скрипт установки:**
@@ -52,7 +52,7 @@ docker-compose up -d --build
 2. **Клонируйте репозиторий:**
 ```bash
 git clone https://github.com/iFUOqN9d14aC1c/convert.git
-cd telegram-proxy-converter
+cd convert
 ```
 
 3. **Установите зависимости:**
