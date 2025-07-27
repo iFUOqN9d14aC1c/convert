@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Converter</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="#0088cc"/>
+                            <path d="M8 16l4-4 4 4 8-8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h1>Proxy Converter</h1>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="converter-section">
+                    <div class="mode-selector">
+                        <button id="convert-mode" class="mode-btn active">Конвертация прокси</button>
+                        <button id="decode-mode" class="mode-btn">Расшифровка Telegram</button>
+                    </div>
+
+                    <div id="convert-panel" class="panel active">
+                        <div class="input-group">
+                            <label for="protocol">Протокол:</label>
+                            <select id="protocol" class="input">
+                                <option value="http">HTTP</option>
+                                <option value="https">HTTPS</option>
+                                <option value="socks4">SOCKS4</option>
+                                <option value="socks5">SOCKS5</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ip">IP адрес:</label>
+                            <input type="text" id="ip" class="input" placeholder="127.0.0.1" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="port">Порт:</label>
+                            <input type="number" id="port" class="input" placeholder="8080" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="username">Логин (опционально):</label>
+                            <input type="text" id="username" class="input" placeholder="username">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="password">Пароль (опционально):</label>
+                            <input type="password" id="password" class="input" placeholder="password">
+                        </div>
+
+                        <button id="convert-btn" class="btn primary">Конвертировать</button>
+
+                        <div id="convert-result" class="result hidden">
+                            <label>Результат:</label>
+                            <div class="result-content">
+                                <input type="text" id="convert-output" class="input" readonly>
+                                <button id="copy-convert" class="btn secondary">Копировать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="decode-panel" class="panel">
+                        <div class="input-group">
+                            <label for="telegram-url">Telegram SOCKS ссылка:</label>
+                            <input type="text" id="telegram-url" class="input" 
+                                   placeholder="https://t.me/socks?server=1.1.1.1&port=444&user=login&pass=password">
+                        </div>
+
+                        <button id="decode-btn" class="btn primary">Расшифровать</button>
+
+                        <div id="decode-result" class="result hidden">
+                            <label>Расшифрованные данные:</label>
+                            <div class="decoded-info">
+                                <div class="info-item">
+                                    <span class="label">Сервер:</span>
+                                    <span id="decoded-server" class="value"></span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Порт:</span>
+                                    <span id="decoded-port" class="value"></span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Пользователь:</span>
+                                    <span id="decoded-user" class="value"></span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Пароль:</span>
+                                    <span id="decoded-pass" class="value"></span>
+                                </div>
+                            </div>
+                            <div class="result-content">
+                                <input type="text" id="decode-output" class="input" readonly>
+                                <button id="copy-decode" class="btn secondary">Копировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Поддерживаемые форматы:</h3>
+                    <ul class="format-list">
+                        <li><code>http://ip:port</code></li>
+                        <li><code>https://ip:port</code></li>
+                        <li><code>socks4://ip:port</code></li>
+                        <li><code>socks5://ip:port</code></li>
+                        <li><code>protocol://username:password@ip:port</code></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
